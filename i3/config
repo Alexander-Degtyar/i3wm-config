@@ -173,11 +173,29 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#--------------------------------------- bar colors ----------------------------------------------
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	status_command i3status -c ~/.config/i3status/i3status.conf
+
+	colors {
+		# bar bg color
+		background #383c4a
+		# bar text color
+		statusline #9A9FAA
+		separator #4b5162
+
+		# Workspaces
+		# border, background, text
+		focused_workspace #000000 #5294e2 #383c4a
+		active_workspace #000000 #404552 #9A9FAA
+		inactive_workspace #000000 #404552 #9A9FAA
+		urgent_workspace #d33682 #d33682 #fdf6e3
+	}
 }
+#--------------------------------------- bar colors ----------------------------------------------
+
 
 #-------------------------------------- system power ---------------------------------------------
 # TODO: Doesn't work. Fix. Took from Manjaro i3wm config.
